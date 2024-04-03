@@ -190,9 +190,9 @@ One other thing that I wanted to explore was 3D mapping. To create a three-dimen
 
 To see sales by city, I selected *Location* > *City* and *Height* > *Sales (Sum)*.
 
-<img width=80% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/World3.png>
+<img width=25% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/World3.png>
 
-<img width=25% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/World2.png>
+<img width=80% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/World2.png>
 
 One last thing I wanted to see was sales over time, so in the time field, I selected *Order Date (None)*. After that, I edited the time syntax that appeared in the top left corner of the map.
 
