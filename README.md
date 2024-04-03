@@ -196,4 +196,5 @@ To see sales by city, I selected *Location* > *City* and *Height* > *Sales (Sum)
 
 One last thing I wanted to see was sales over time, so in the time field, I selected *Order Date (None)*. After that, I edited the time syntax that appeared in the top left corner of the map.
 
+![3DSales](https://github.com/WilliamJMora/SalesDashboard/assets/116101032/5c338190-aa64-44ec-b193-9eddf0386321)
 
