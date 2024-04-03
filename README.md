@@ -153,24 +153,38 @@ I wanted green, blue, and purple colors on the dashboard, so I went with a built
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotChart3.png>
 
-
+Once I finished making the pivot charts, I made the slicers. To do this, I selected *Slicer* while my cursor was in a pivot table. Since the slicers are connected to all of the charts (with the exception of the regions map), it did not matter which chart the cursor was in. 
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer1.png>
 
+For the first slicer, I wanted to be able to filter the charts by order month, so I checked that category.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer2.png>
+
+To make all the charts update with the slicer, I selected *Report Connections...* and checked each pivot table with the exceptions of the average time pivot tables that I created.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer3.png>
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer4.png>
 
+Then, I made other slicers that filtered data by order year, city, state, and region. Now, I could finally put all of the data on the dashboard.
+
 ### 4. Dashboard Creation ###
+
+Choosing the style of the dashboard depends on personal choice, but I made the gray background so the charts can stand out. This was done by inserting a rounded rectangle shape and removing the border. For each chart, I also inserted a rounded rectangle and then applied a shadow. The icons that are on each chart come with Microsoft Excel. I created a custom slicer style. All of these options can be found in the tabs on the top ribbon in Excel. The charts referring to products and customers are filtered by the top 5 and top 10 data values. This is done by selecting the relevant pivot table and then choosing *Value Filters* > *Top 10*.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Dashboard1.png>
 
+This is what the chart looks like when filtering by the year 2019. If I were to filter by city, the state slicer would automatically choose the state that the city is in.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Dashboard2.png>
+
+The warehouse pivot tables that I created were not used in this dashboard, but I can create a separate dashboard visualizing the warehouse data. The same can be said for the sales team data.
 
 
 ### 5. 3D Mapping ###
+
+
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/World1.png>
 
