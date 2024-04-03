@@ -9,7 +9,7 @@ In this project, I created a Microsoft Excel sales dashboard featuring pivot cha
 
 1. Data Cleaning
 2. Pivot Tables
-3. Pivot Charts
+3. Pivot Charts and Slicers
 4. Dashboard Creation
 5. 3D Mapping
 
@@ -54,25 +54,49 @@ This data could be valuable when doing other analysis like regression, but I did
 
 <img width=55% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Table2.png>
 
-Next, I wanted to merge data from the other five sheets into the sales orders sheet so it would be simple to create pivot tables and pivot charts. 
+Next, I wanted to merge data from the other five sheets into the sales orders sheet so it would be simple to create pivot tables and pivot charts. I did this by selecting *Merge Queries*.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning6.png>
 
+There were five merges that I wanted to complete. The first merge was with the customers sheet. I selected the customer ID columns from both tables as the matching columns and I made the sales orders table the primary table. I selected left outer join as the join type since I wanted all of the rows from the left table (sales orders sheet) and the matching rows from the right table (customers sheet).
+
 <img width=50% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning7.png>
+
+I expanded the customers sheet that was now present in the sales orders sheet and selected the columns I wanted to retain, which was only the customer names. Then, I removed the customer ID column from the sales orders sheet since I no longer needed it.
+
+The four other merges I completed were: <br/>
+Sales Orders Sheet (Sales Team ID) > Sales Teams Sheet (Sales Team ID) => kept sales team and region from sales teams sheet, removed sales team ID from sales orders sheet <br/>
+Sales Orders Sheet (Product ID) > Products Sheet (Product ID) => kept product name from products sheet, removed product ID from sales orders sheet <br/>
+Sales Orders Sheet (Store ID) > Store Locations (Store ID) => kept city and state from store locations, removed store ID from sales orders sheet <br/>
+Sales Orders Sheet (State) > Regions Sheet (State) => kept region from regions sheet, but did not remove state from sales orders sheet
+
+I changed region from the sales teams sheet to sales team region since there were two region columns (the other referring to state regions).
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning8.png>
 
+After the merges, I wanted to create some new columns using calculations. I started by selecting *Custom Column*.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning9.png>
+
+I created price by multiplying order quantity by unit price. I also made a cost column by multiplying order quantity by unit cost, then a profit solumn by subtracting cost from price. I removed the unit price and unit cost solumns thereafter.
 
 <img width=50% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning10.png>
 
+I converted these columns to currency by selecting the data type icon on the column header and choosing *Currency*. Another option was to change the data types after loading the data into Excel, which is what the screenshot below is from.
+
 <img width=20% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning11.png>
+
+Then, I created columns that found the difference between order date and ship date (named order to ship) and ship date and delivery date (named ship to delivery). This was done by selecting the two columns, then choosing *Date* > *Subtract Days*.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning12.png>
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning13.png>
 
+Lastly, I wanted to get the month and day from both the order date and ship date. I did this by selecting the column and just like before, went to *Date* > *Name of Month*. The same method applied for the day.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning14.png>
+
+I seleted *Close & Load* to bring in the changes to Microsoft Excel. Now, I was ready to create pivot tables and slicers.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning15.png>
 
@@ -96,7 +120,7 @@ Next, I wanted to merge data from the other five sheets into the sales orders sh
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable9.png>
 
-### 3. Pivot Charts ###
+### 3. Pivot Charts and Slicers ###
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotChart1.png>
 
