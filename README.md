@@ -15,6 +15,7 @@ In this project, I created a Microsoft Excel sales dashboard featuring pivot cha
 
 First, I used data cleaning techniques to prepare the data with power query. Next, I created pivot tables to pull relevant data from the worksheet and subsequently used them to create pivot charts. Then, the pivot charts were applied onto the dashboard. Lastly, I wanted to see how Excel's 3D mapping could be used to visualize the data through animation.
 
+
 ### 1. Data Cleaning ###
 
 To start, the first thing I needed was a dataset with sales data. The dataset that I used is at https://data.world/dataman-udit/us-regional-sales-data (credit: Udit Kumar Chatterjee, @dataman-udit).
@@ -78,7 +79,7 @@ After the merges, I wanted to create some new columns using calculations. I star
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning9.png>
 
-I created price by multiplying order quantity by unit price. I also made a cost column by multiplying order quantity by unit cost, then a profit solumn by subtracting cost from price. I removed the unit price and unit cost solumns thereafter.
+I created sale by multiplying order quantity by unit price. I also made a cost column by multiplying order quantity by unit cost, then a profit solumn by subtracting cost from price. I removed the unit price and unit cost solumns thereafter.
 
 <img width=50% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning10.png>
 
@@ -96,43 +97,78 @@ Lastly, I wanted to get the month and day from both the order date and ship date
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning14.png>
 
-I seleted *Close & Load* to bring in the changes to Microsoft Excel. Now, I was ready to create pivot tables and slicers.
+I selected *Close & Load* to bring in the changes to Microsoft Excel. Now, I was ready to create pivot tables.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/DataCleaning15.png>
 
+
 ### 2. Pivot Tables ###
+
+To start creating pivot tables, I selected *Pivot Table* > *From Table/Range* and then highlighted the data in the sales orders sheet.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable1.png>
 
+The first table I created displayed sales by sales channel. I put sales channel in the rows field and sale in the values field.
+
 <img width=25% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable2.png>
+
+I changed the sales data to the currency data type.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable3.png>
 
+The next table I wanted to create was the average amount of time it took for each warehouse to ship packages. This is why I created the order to ship column earlier. First, I copied and pasted the first pivot table next to the first one. Then, I followed the same process as above with dragging the warehouse into the filters field and order to ship into the values field. I had to change the aggregation of the order to ship column from sum to average. I did this by selecting the drop-down arrow, *Value Field Settings...* > *Average*. 
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable4.png>
+
+I rounded the values to two decimal places using the numbers tab.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable5.png>
 
 <img width=30% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable6.png>
 
+The next pivot table I made was simply a sales aggregate. I dragged sales into the values field and made sure the aggregation was sum.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable7.png>
+
+Going back to the sales by sales channel pivot table, I sorted the data from largest to smallest so the pivot chart goes from largest to smallest.
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable8.png>
 
+This shows all of the pivot tables I created. Now, I could use these tables to create pivot charts.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotTable9.png>
+
 
 ### 3. Pivot Charts and Slicers ###
 
+To make pivot charts, I put my cursor on the relevant pivot chart and selected *Pivot Chart*.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotChart1.png>
+
+For the sales by sales channel chart, I went with a pie chart to show how much money in sales were made by each sales channel as a whole. If I wanted the raw number of sales or the money made by each sales channel, I would have went with a bar chart. This article (credit: Janis Gulbis) gives an overview of which chart to use given what is wanted to be visualized: https://eazybi.com/blog/data-visualization-and-chart-types.
 
 <img width=40% src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotChart2.png>
 
+I wanted green, blue, and purple colors on the dashboard, so I went with a built-in blue style. Styling can be discovered and adjusted with by exploring Excel. As a side note, the only chart that was not created with a pivot chart was the regions map, in which the regions sheet was used instead.
+
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/PivotChart3.png>
+
+
+
+<img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer1.png>
+
+<img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer2.png>
+
+<img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer3.png>
+
+<img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Slicer4.png>
 
 ### 4. Dashboard Creation ###
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Dashboard1.png>
 
 <img src=https://github.com/WilliamJMora/SalesDashboard/blob/main/Pictures/Dashboard2.png>
+
 
 ### 5. 3D Mapping ###
 
